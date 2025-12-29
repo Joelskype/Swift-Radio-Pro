@@ -29,7 +29,14 @@ class StationsViewController: BaseController, Handoffable {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         return refreshControl
-    }()
+    }() {
+        
+        didSet {
+            
+            refreshControl.accessibilityIdentifier = "RefreshControl"
+        }
+    }
+        
     
     private let searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)

@@ -1,4 +1,5 @@
 {
+  "originHash" : "0c90630833c00897fa62fb642222f0f9abcb36846cf4831b8ddca9125610a654",
   "pins" : [
     {
       "identity" : "fradioplayer",
@@ -26,7 +27,16 @@
         "branch" : "master",
         "revision" : "63d6b2b4339606181617caddea3a988aa65bcadd"
       }
+    },
+    {
+      "identity" : "swifter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/httpswift/swifter",
+      "state" : {
+        "revision" : "9483a5d459b45c3ffd059f7b55f9638e268632fd",
+        "version" : "1.5.0"
+      }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

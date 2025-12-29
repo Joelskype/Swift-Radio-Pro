@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2C5545BD1C1124DE00728469 /* SwiftRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5545BC1C1124DE00728469 /* SwiftRadioUITests.swift */; };
+		2E808A202F03060400FC28B6 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E808A1F2F03060400FC28B6 /* BaseTestCase.swift */; };
+		2EF6F1522ED34DC700E6E34A /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 2EF6F1512ED34DC700E6E34A /* Swifter */; };
 		53113F39230C720900462C0E /* ShareActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53113F38230C720900462C0E /* ShareActivity.swift */; };
 		5FDEE0221F72FF980064333C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDEE0211F72FF980064333C /* LaunchScreen.storyboard */; };
 		6258DCD822D93A3500166C65 /* LogoShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6258DCD722D93A3500166C65 /* LogoShareView.swift */; };
@@ -101,6 +103,7 @@
 		2C5545BA1C1124DE00728469 /* SwiftRadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5545BC1C1124DE00728469 /* SwiftRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRadioUITests.swift; sourceTree = "<group>"; };
 		2C5545BE1C1124DE00728469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E808A1F2F03060400FC28B6 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		53113F38230C720900462C0E /* ShareActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivity.swift; sourceTree = "<group>"; };
 		5FDEE0211F72FF980064333C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6258DCD722D93A3500166C65 /* LogoShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoShareView.swift; sourceTree = "<group>"; };
@@ -142,11 +145,17 @@
 		CF72ACE621F714D000461EED /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2E17B4F62EE1CAE7009BD2F5 /* MockServerHelpers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MockServerHelpers; sourceTree = "<group>"; };
+		2ECF30F62EEC17BF009818C0 /* Screens */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Screens; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		2C5545B71C1124DE00728469 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF6F1522ED34DC700E6E34A /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,10 +187,21 @@
 		2C5545BB1C1124DE00728469 /* SwiftRadioUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2C5545BC1C1124DE00728469 /* SwiftRadioUITests.swift */,
+				2E808A1E2F0305DE00FC28B6 /* Tests */,
+				2ECF30F62EEC17BF009818C0 /* Screens */,
+				2E17B4F62EE1CAE7009BD2F5 /* MockServerHelpers */,
 				2C5545BE1C1124DE00728469 /* Info.plist */,
 			);
 			path = SwiftRadioUITests;
+			sourceTree = "<group>";
+		};
+		2E808A1E2F0305DE00FC28B6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C5545BC1C1124DE00728469 /* SwiftRadioUITests.swift */,
+				2E808A1F2F03060400FC28B6 /* BaseTestCase.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		9409E10D1ABF6FE900312E2B = {
@@ -343,6 +363,10 @@
 			dependencies = (
 				2C5545C01C1124DE00728469 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				2E17B4F62EE1CAE7009BD2F5 /* MockServerHelpers */,
+				2ECF30F62EEC17BF009818C0 /* Screens */,
+			);
 			name = SwiftRadioUITests;
 			productName = SwiftRadioUITests;
 			productReference = 2C5545BA1C1124DE00728469 /* SwiftRadioUITests.xctest */;
@@ -434,6 +458,7 @@
 				CE37D7B2290F47E000B0933B /* XCRemoteSwiftPackageReference "Spring" */,
 				CE37D7B5290F4A9700B0933B /* XCRemoteSwiftPackageReference "FRadioPlayer" */,
 				CE60361F2A48C51A00E15E15 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				2EF6F1502ED34DC700E6E34A /* XCRemoteSwiftPackageReference "swifter" */,
 			);
 			productRefGroup = 9409E1171ABF6FEA00312E2B /* Products */;
 			projectDirPath = "";
@@ -488,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E808A202F03060400FC28B6 /* BaseTestCase.swift in Sources */,
 				2C5545BD1C1124DE00728469 /* SwiftRadioUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -891,6 +917,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2EF6F1502ED34DC700E6E34A /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 		CE37D7B2290F47E000B0933B /* XCRemoteSwiftPackageReference "Spring" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/fethica/Spring.git";
@@ -934,6 +968,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2EF6F1512ED34DC700E6E34A /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2EF6F1502ED34DC700E6E34A /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
 		CE37D7B3290F47E000B0933B /* Spring */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE37D7B2290F47E000B0933B /* XCRemoteSwiftPackageReference "Spring" */;
