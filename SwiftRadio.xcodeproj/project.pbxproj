@@ -148,6 +148,7 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2E17B4F62EE1CAE7009BD2F5 /* MockServerHelpers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MockServerHelpers; sourceTree = "<group>"; };
 		2ECF30F62EEC17BF009818C0 /* Screens */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Screens; sourceTree = "<group>"; };
+		62243C412F078C660096EAFC /* Helpers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Helpers; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +188,7 @@
 		2C5545BB1C1124DE00728469 /* SwiftRadioUITests */ = {
 			isa = PBXGroup;
 			children = (
+				62243C412F078C660096EAFC /* Helpers */,
 				2E808A1E2F0305DE00FC28B6 /* Tests */,
 				2ECF30F62EEC17BF009818C0 /* Screens */,
 				2E17B4F62EE1CAE7009BD2F5 /* MockServerHelpers */,
@@ -366,6 +368,7 @@
 			fileSystemSynchronizedGroups = (
 				2E17B4F62EE1CAE7009BD2F5 /* MockServerHelpers */,
 				2ECF30F62EEC17BF009818C0 /* Screens */,
+				62243C412F078C660096EAFC /* Helpers */,
 			);
 			name = SwiftRadioUITests;
 			productName = SwiftRadioUITests;
