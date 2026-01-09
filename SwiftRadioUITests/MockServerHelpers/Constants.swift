@@ -15,7 +15,13 @@ enum EndpointURL {
     
 }
 
-
+enum ImageURL: String, CaseIterable {
+    
+    case first = "station-absolutecountry.png"
+    case second = "az-rock-radio"
+    case third = "https://fethica.com/assets/swift-radio/station-therockfm@3x.png"
+    case fourh = "station-classicrock"
+}
 //enum Endpoint {
 //    
 //    static let sucess = .ok(.json(["station": self?.mockStationsData] ?? []))

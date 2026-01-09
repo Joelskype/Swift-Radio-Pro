@@ -10,7 +10,7 @@ import Foundation
 
 
 
-enum StationPrams {
+enum StationPrams: String {
     
     case name
     case streamURL

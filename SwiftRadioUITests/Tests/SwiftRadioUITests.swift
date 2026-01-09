@@ -61,51 +61,27 @@ final class SwiftRadioUITests: BaseTestCase {
         
         setupMockEnvironment()
         
-        mockStationsData = [
-            
-            ["name": "Test staiton 1",
-            "streamURL": "http://strm112.1.fm/acountry_mobile_mp3",
-            "imageURL": "station-absolutecountry.png",
-            "desc": "staiton 1",
-            "longDesc": "This is test data for first station"
-             ],
-            ["name": "Test staiton 2",
-            "streamURL": "http://cassini.shoutca.st:9300/stream",
-            "imageURL": "https://fethica.com/assets/swift-radio/station-therockfm@3x.png",
-            "desc": "staiton 2",
-            "longDesc": "This is test data for second station"
-             ],
-            ["name": "Test staiton 3",
-            "streamURL": "http://rfcmedia.streamguys1.com/classicrock.mp3",
-            "imageURL": "station-classicrock",
-            "desc": "staiton 3",
-            "longDesc": "This is test data for third station"
-             ]
-        ]
+        mockStationsData = StationsDataBuilder().withCount(5).build()
         
         app.launch()
         
         XCTAssertTrue(stationsScreen.isDisplayed())
-        XCTAssertEqual(stationsScreen.stationsCount, 2)
+        XCTAssertEqual(stationsScreen.stationsCount, 1)
         XCTAssertTrue(stationsScreen.hasStation(named: "Test staiton 1"))
-        
     }
     
     func testEnterOnNowPlayingScreen() throws {
         
         setupMockEnvironment()
         
-        mockStationsData = [
-            
-            ["name": "Test staiton 1",
-            "streamURL": "http://strm112.1.fm/acountry_mobile_mp3",
-            "imageURL": "station-absolutecountry.png",
-            "desc": "staiton 1",
-            "longDesc": "This is test data for first station"
-             ]
-        ]
+        mockStationsData =
+        StationsDataBuilder()
+            .withCount(3)
+            .build()
         
         app.launch()
+        print(mockStationsData)
+        sleep(123)
         
         stationsScreen.tapOnStation(at: 0)
         XCTAssertEqual(app.sliders.firstMatch.label, "Volume")
